@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Video.nu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<body>
+<div class="watermark-container">
+  <div class="watermark left"><img src="logo.png" alt="Watermerk"></div>
+  <div class="watermark right"><img src="logo.png" alt="Watermerk"></div>
+  <div class="watermark left"><img src="logo.png" alt="Watermerk"></div>
+</div>
+
+<div id="aiVideoPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    <h2>Ik wil een AI video</h2>
+    <form action="https://formspree.io/f/mkgbynga" method="POST" enctype="multipart/form-data">
+      <label for="naam">Naam:</label>
+      <input type="text" id="naam" name="naam" required>
+
+      <label for="voornaam">Voornaam:</label>
+      <input type="text" id="voornaam" name="voornaam" required>
+
+      <label for="email">E-mailadres:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="soort">Soort video:</label>
+      <select id="soort" name="soort">
+        <option value="presentatie">AI Presentatievideo</option>
+        <option value="shorts">Shorts & Social Clips</option>
+        <option value="text-to-video">Text-to-Video</option>
+        <option value="animatie">AI Animatievideo</option>
+        <option value="gepersonaliseerd">Gepersonaliseerde AI Video</option>
+        <option value="bedrijfsvideo">Bedrijfsvideo</option>
+      </select>
+
+      <label for="omschrijving">Korte omschrijving:</label>
+      <textarea id="omschrijving" name="omschrijving" rows="4"></textarea>
+
+      <label for="bestand">Upload bestand:</label>
+      <input type="file" id="bestand" name="bestand">
+
+      <button type="submit">Verzenden</button>
+    </form>
+  </div>
+</div>
+
+<div class="madeby"><p>Made by AI</p></div>
+
+<div class="top-bar">
+  <span class="lijntje">
+    <span class="tekst">Bekend van</span>
+    <img src="RTL4.png" alt="RTL4" class="top-logo">
+    <span class="tekst">en</span>
+    <img src="SBS.png" alt="SBS" class="top-logo">
+  </span>
+</div>
+
+<nav class="main-nav">
+  <div class="nav-left">
+    <a href="#">Home</a>
+    <a href="#AI-Services">AI-Video</a>
+    <a href="#Contact">AI Workshop</a>
+  </div>
+
+  <div class="logo-wrapper">
+    <img src="Logo.svg" class="logo-center" alt="logo">
+  </div>
+
+  <div class="nav-right">
+    <a href="#Contact">eBook</a>
+    <a href="#AI-Video">AI Services</a>
+    <a href="#Contact">Contact</a>
+    <div class="flags">
+      <img src="flag-en.png" alt="English" class="flag-icon">
+      <img src="flag-ru.png" alt="Russian" class="flag-icon">
+      <img src="flag-nl.png" alt="Dutch" class="flag-icon">
+    </div>
+  </div>
+</nav>
+
+<nav class="mobile-nav">
+  <div class="logo-wrapper">
+    <img src="Logo.svg" class="logo-center logo-mobile" alt="logo">
+  </div>
+
+  <button class="hamburger" id="hamburger">&#9776;</button>
+  <button class="close-menu" id="close-menu">&times;</button>
+
+
+  <div class="nav-menu" id="nav-menu">
+    <a href="#">Home</a>
+    <a href="#AI-Services">AI-Video</a>
+    <a href="#Contact">AI Workshop</a>
+    <a href="#Contact">eBook</a>
+    <a href="#AI-Video">AI Services</a>
+    <a href="#Contact">Contact</a>
+    <div class="flags">
+      <img src="flag-en.png" alt="English" class="flag-icon">
+      <img src="flag-ru.png" alt="Russian" class="flag-icon">
+      <img src="flag-nl.png" alt="Dutch" class="flag-icon">
+    </div>
+  </div>
+</nav>
+
+
+
+<header class="hero-header">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="AI-video.mp4" type="video/mp4">
+        Je browser ondersteunt geen video-element.
+    </video>
+    <div class="hero-content">
+        <h1>Binnen 24 uur jouw video<br>Oog voor Detail, slim gemaakt met AI</h1>
+        <p>Slimme AI-video’s op maat – betaalbaar, snel én effectief voor je bedrijf.</p>
+        <p class="cursive">Echte opnames op locatie, aangevuld of volledig gemaakt met AI.</p>
+        <div class="cta-buttons">
+            <a href="#Contact">Ik wil een AI-Video</a>
+            <a href="https://calendly.com/future-ai-video/30min" target=_blank class="CTA">Gratis video-adviesgesprek</a>
+        </div>
+    </div>
+</header>
+
+<section class="features-section fade-in">
+  <div id="AI-Video" class="features-intro">
+    <h2>Waarom AI-Video?</h2>
+    <p class="bold-p">Professionele video’s, slim gemaakt met AI</p>
+    <p>Wij maken het eenvoudig om snel en betaalbaar professionele video's te laten maken met behulp van kunstmatige intelligentie.
+<br>Geen camera’s, geen acteurs, wél impactvolle video’s die jouw boodschap perfect overbrengen.
+
+<br><br>Of het nu gaat om productpresentaties, uitlegvideo’s, social content of bedrijfsvideo’s – wij leveren razendsnel, op maat en helemaal in jouw huisstijl.
+
+<br><br>Laat je verrassen door de kracht van AI en ontdek wat er mogelijk is!</p>
+
+</p>
+  </div>
+
+  <div class="features-carousel-container">
+    <button class="carousel-button left">&#10094;</button>
+    <div class="features-carousel">
+      <div class="feature-card">
+        <img src="1.png" alt="AI Presentatievideo’s">
+        <h3>AI Presentatievideo’s<br>(Avatars + Voice-over)</h3>
+        <p>Een virtuele presentator of AI-stem brengt jouw boodschap tot leven.
+<br><h4>Inclusief:</h4>
+AI avatars (virtuele presentatoren)
+
+<br>AI voice-overs in elke taal/stijl
+<br><br>Perfect voor uitlegvideo’s, e-learning, onboarding of nieuwsberichten</p>
+      </div>
+      <div class="feature-card">
+        <img src="2.png" alt="AI Shorts & Social Clips">
+        <h3>AI Shorts & Social Clips</h3>
+        <p>Van lange content (zoals podcasts/webinars) naar kant-en-klare TikToks, Reels of YouTube Shorts.
+<br><h4>Inclusief:</h4>
+AI highlight cutter
+
+<br>Automatische ondertiteling
+
+<br>Formaatoptimalisatie voor elk platform<br><br>
+Snel en schaalbaar content recyclen.</p>
+      </div>
+      <div class="feature-card">
+        <img src="3.png" alt="Text-to-Video & Blog-to-Video">
+        <h3>Text-to-Video & Blog-to-Video</h3>
+        <p>Zet tekst, blogs of PowerPoint-presentaties om in video’s met stockbeelden, muziek en voice-over.
+<br><h4>Inclusief:</h4>
+Scriptgeneratie (optioneel)
+
+<br>Stockvideo’s + muziek + titels
+<br><br>Ideaal voor marketing, nieuws, productintroducties.</p>
+      </div>
+      <div class="feature-card">
+        <img src="4.png" alt="AI Animatie Video’s">
+        <h3>AI Animatie Video’s</h3>
+        <p>Slimme animatievideo’s zonder dure studio’s.
+<br><h4>Mogelijkheden:</h4>
+Whiteboard animatie
+
+<br>2D motion graphics
+
+<br>AI gegenereerde illustraties en infographics
+<br><br>Perfect voor uitleg, campagnes, interne communicatie.</p>
+      </div>
+      <div class="feature-card">
+        <img src="5.png" alt="Gepersonaliseerde AI Video’s (Deepfake-style)">
+        <h3>Gepersonaliseerde AI Video’s (Deepfake-style)</h3>
+        <p>Hyperpersoonlijke video’s waarin een AI-versie van iemand rechtstreeks de kijker aanspreekt.
+<br><h4>Voorbeelden:</h4>
+“Hoi [Naam], dit is speciaal voor jou…”
+
+<br>Gepersonaliseerde salesvideo’s, onboarding of verjaardagsberichten
+<br><br>Maakt impact in funnels, e-mails en events.</p>
+      </div>
+    </div>
+    <button class="carousel-button right">&#10095;</button>
+  </div>
+</section>
+
+<section class="video-fullwidth fade-in">
+
+<video autoplay muted loop playsinline style="border-radius: 15px; overflow: hidden;">
+  <source class="videoinsite" src="jouw-video.mp4" type="video/mp4">
+  Je browser ondersteunt geen video-element.
+</video>
+
+</section>
+
+
+<section id="AI-Services" class="steps-section fade-in">
+  <h2>Zo werkt AI-Video.nu in 3 eenvoudige stappen</h2>
+  <div class="steps-grid">
+    <div class="step-card">
+      <img src="6.png" alt="Type video">
+      <h3>Stap 1: Kies je videostijl</h3>
+      <p>Selecteer één van de 5 AI Video Services:</p>
+        <ol>
+          <li>AI Presentatievideo (met avatar of voice-over)</li>
+          <li>Shorts & Social Clips (voor TikTok, Reels, Shorts)</li>
+          <li>Text-to-Video (van blog, tekst of PowerPoint)</li>
+          <li>AI Animatievideo (whiteboard / motion graphics)</li>
+          <li>Gepersonaliseerde AI-video (deepfake stijl, met naam en boodschap)</li>
+        </ol>
+    </div>
+    <div class="step-card">
+      <img src="7.png" alt="Input uploaden">
+      <h3>Stap 2: Upload je content</h3>
+      <p>Lever eenvoudig je input aan via mail:</p>
+      <ul>
+        <li>Script, blog, video of audiobestand</li>
+        <li>Wensen voor stijl, toon, taal of platform</li>
+        <li>(Optioneel) logo, kleuren of voorbeeldvideo’s</li>
+      </ul>
+    </div>
+    <div class="step-card">
+      <img src="8.png" alt="Video ontvangen">
+      <h3>Stap 3: Video geleverd in 24 uur (3 werkdagen)</h3>
+      <p>Je ontvangt je video razendsnel in je inbox:</p>
+      <ul>
+        <li>24 uur (3 werkdagen) bij standaardopdrachten</li>
+        <li>Inclusief één correctieronde</li>
+      </ul>
+    </div>
+  </div>
+<div class="cta-buttons">
+            <a href="#Contact">Ik wil een AI-Video</a>
+            <a href="https://calendly.com/future-ai-video/30min"
+ target=_blank class="CTA">Gratis video-adviesgesprek</a>
+
+        </div>
+
+</section>
+
+<section class="centreren fade-in">
+<h2>AI bedrijfsvideo's</h2><br>
+<h3>Wij maken bedrijfsvideo’s in verschillende varianten:</h3>
+<p>
+met echte opnames op locatie, aangevuld of volledig gemaakt met AI.<br><br>
+
+Bijvoorbeeld:<br><br>
+Jijzelf in beeld op locatie<br>
+Een AI-avatar die jouw verhaal vertelt (ook in meerdere talen)<br>
+Of een combinatie van echt + AI<br><br>
+
+
+Jouw complete AI-video: €1.925<br>
+Geen kleine lettertjes. Eén vaste prijs. Alles inbegrepen.</p>
+
+<h3>Snel. Betaalbaar. Professioneel.</h3>
+
+<div class="image-row">
+  <img src="1.jpg" alt="Brons">
+  <img src="2.jpg" alt="Zilver">
+  <img src="3.jpg" alt="Goud">
+</div>
+
+</section>
+
+<hr class="gouden-lijn">
+
+
+<section class="portfolio-showcase fade-in">
+  <h2>Portfolio</h2>
+  <div class="logo-grid">
+    <img src="logo1.png" alt="Logo 1">
+    <img src="logo2.png" alt="Logo 2">
+    <img src="logo3.png" alt="Logo 3">
+    <img src="logo4.jpg" alt="Logo 4">
+    <img src="logo5.png" alt="Logo 5">
+    <img src="logo6.png" alt="Logo 6">
+  </div>
+</section>
+
+<section>
+    <h2>Wat zeggen klanten?</h2>
+    <div class="fade-in testimonials">
+        <blockquote><h3>TravWizards</h3>
+"Wij hebben als TravWizards een bijzonder goede samenwerking gehad! Prachtige opnames, zeer flexibel opnameteam en alles volgens afspraak (meer dan dat zelfs). Wij zijn dus zeer tevreden over dit creatieve team en raden iedereen een samenwerking met hen aan."</blockquote>
+        <blockquote>
+          <h3>Huub Knapen</h3>
+"Ik ben geïnterviewd met mijn Amazon business en educatiebedrijf. Het was een heel tof interview, vooral omdat er oprecht interesse werd getoond in het onderwerp. Ik adviseer iedereen die een goed en interessant interview wil contact op te nemen. Kortom; keep up the good work!"</blockquote>
+        <blockquote>
+          <h3>Bilal Yakhlaf</h3>
+          
+"Perfecte samenwerking gehad met jullie. Bedankt voor alles."
+        </blockquote>
+    </div>
+</section>
+
+<section class="faq-section fade-in">
+  <h2>Veelgestelde vragen (FAQ)</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <button class="faq-question">
+        Wat is een AI-video precies?
+        <span class="arrow">&#10095;</span>
+      </button>
+      <div class="faq-answer">
+        <p>Een AI-video is een video die (deels) automatisch wordt gegenereerd met behulp van kunstmatige intelligentie. Denk aan virtuele presentatoren (avatars), automatisch gegenereerde voice-overs, of video's die zijn samengesteld uit tekst, beelden en muziek zonder dat je zelf voor de camera hoeft te staan.</p>
+      </div>
+    </div>
+
+        <div class="faq-item">
+      <button class="faq-question">
+        Hoe snel ontvang ik mijn video?
+        <span class="arrow">&#10095;</span>
+      </button>
+      <div class="faq-answer">
+        <p>In de meeste gevallen leveren we je video binnen 24 uur. Bij grotere of meertalige projecten is de levertijd maximaal 3 werkdagen. Je ontvangt de video kant-en-klaar, inclusief ondertiteling en muziek (indien van toepassing).</p>
+      </div>
+    </div>
+
+        <div class="faq-item">
+      <button class="faq-question">
+        Moet ik zelf voor de camera staan?
+        <span class="arrow">&#10095;</span>
+      </button>
+      <div class="faq-answer">
+       <p>Nee, dat hoeft niet! Dankzij AI kunnen we video’s maken zonder dat jij in beeld komt. We gebruiken avatars, voice-overs en stockbeelden om jouw verhaal te vertellen. Ideaal als je snel en professioneel zichtbaar wilt zijn, zonder opnamedag.</p></div>
+    </div>
+
+        <div class="faq-item">
+      <button class="faq-question">
+        Kan ik kiezen hoe mijn video eruitziet?
+        <span class="arrow">&#10095;</span>
+      </button>
+      <div class="faq-answer">
+        <p>Zeker! Je kiest zelf het videotype (avatar, animatie, social clip, etc.), levert input aan (zoals een tekst, script of blog) en kunt zelfs voorkeuren aangeven voor stijl, taal, muziek of kleurgebruik.</p>></div>
+    </div>
+
+        <div class="faq-item">
+      <button class="faq-question">
+        Krijg ik een correctieronde?
+        <span class="arrow">&#10095;</span>
+      </button>
+      <div class="faq-answer">
+      <p>Ja. Bij elke video zit één correctieronde inbegrepen. Zo zorgen we dat je 100% tevreden bent met het eindresultaat.</p></div>
+    </div>
+
+        <div class="faq-item">
+      <button class="faq-question">
+        Voor wie zijn AI-video’s geschikt?
+        <span class="arrow">&#10095;</span>
+      </button>
+      <div class="faq-answer">
+        <p>AI-video’s zijn perfect voor ondernemers, coaches, marketeers, e-commerce, HR, onderwijs en iedereen die snel en professioneel wil communiceren via video. Ook ideaal voor social media, interne communicatie en e-learning.
+
+</p></div>
+    </div>
+
+        <div class="faq-item">
+      <button class="faq-question">
+        Kan ik meerdere video’s in één keer laten maken?
+        <span class="arrow">&#10095;</span>
+      </button>
+      <div class="faq-answer">
+        <p>Absoluut. We bieden ook bundelpakketten of abonnementen aan als je regelmatig video’s nodig hebt (bijvoorbeeld voor een podcast, productlanceringen of social content). Vraag naar de mogelijkheden!
+
+</p></div>
+    </div>
+</div>
+</section>
+
+<div class="call-to-action">
+    <h2>Klaar om jouw AI-video te laten maken?</h2>
+    <p>Binnen 24 uur (3 werkdagen) heb je een kant-en-klare video die jouw verhaal vertelt.</p>
+    <a href="#Contact">Ik wil een AI-Video</a>
+    <a class="CTA2" href="https://calendly.com/future-ai-video/30min" target=_blank >Gratis video-adviesgesprek</a>
+</div>
+
+<footer id="Contact" class="site-footer">
+  <div class="footer-content four-columns">
+    <div class="footer-column">
+      <h3>AI-video.nu</h3>
+      <p>
+        Bob Spaaklaantje 2A<br>
+        1217 ZG Media Park Hilversum<br>
+        Nederland<br>
+<a href="mailto:future@ai-video.nu">future@ai-video.nu</a>
+      </p>
+
+
+    </div>
+
+<div class="footer-column">
+      <img src="bloom-logo.svg" alt="Bloom Media logo" class="bloom-logo"><br>
+    </div>
+      
+    <div class="footer-column">
+      <p>
+        Snel contact via WhatsApp:<br>
+        <img src="https://bloom-media.nl/wp-content/uploads/2025/05/wa_contact-bloom.png" class="whatsapp" alt="Whatsapp contact button" decoding="async" loading="lazy" srcset="https://bloom-media.nl/wp-content/uploads/2025/05/wa_contact-bloom.png 500w, https://bloom-media.nl/wp-content/uploads/2025/05/wa_contact-bloom-300x106.png 300w" sizes="(max-width: 500px) 100vw, 500px">
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <p>
+        Website door <a href="https://www.crazy-lemon.com" target="_blank">Crazy Lemon Designs</a>
+      </p>
+    </div>
+            <strong>Deze website is mede tot stand gekomen door AI.</strong>
+  </div>
+</footer>
+
+
+</body>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      const answer = item.querySelector('.faq-answer');
+
+      if (item.classList.contains('active')) {
+        answer.style.maxHeight = null;
+        item.classList.remove('active');
+      } else {
+        // Eerst alle andere sluiten
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-answer').style.maxHeight = null;
+        });
+
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  });
+
+  const carousel = document.querySelector('.features-carousel');
+  const leftBtn = document.querySelector('.carousel-button.left');
+  const rightBtn = document.querySelector('.carousel-button.right');
+
+  leftBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: -320, behavior: 'smooth' });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: 320, behavior: 'smooth' });
+  });
+
+const fadeElements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+fadeElements.forEach(el => observer.observe(el));
+
+const watermarks = document.querySelectorAll('.watermark');
+watermarks.forEach((wm, index) => {
+  if (index === 0) {
+    wm.style.top = '900px';
+  } else {
+    wm.style.top = `${900 + (index * 2500)}px`;
+  }
+});
+
+document.querySelectorAll('a[href="#Contact"]').forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('aiVideoPopup').style.display = 'flex';
+  });
+});
+
+document.querySelector('.popup-close').addEventListener('click', () => {
+  document.getElementById('aiVideoPopup').style.display = 'none';
+});
+
+window.addEventListener('click', function(e) {
+  const popup = document.getElementById('aiVideoPopup');
+  if (e.target === popup) {
+    popup.style.display = 'none';
+  }
+});
+
+const hamburger = document.getElementById('hamburger');
+const closeMenu = document.getElementById('close-menu');
+const navMenu = document.getElementById('nav-menu');
+const navLinks = navMenu.querySelectorAll('a');
+
+function openMenu() {
+  navMenu.style.display = 'flex';
+  hamburger.style.display = 'none';
+  closeMenu.style.display = 'block';
+  document.body.style.overflow = 'hidden'; // Scroll blokkeren
+}
+
+function closeMenuFunc() {
+  navMenu.style.display = 'none';
+  hamburger.style.display = 'block';
+  closeMenu.style.display = 'none';
+  document.body.style.overflow = 'auto'; // Scroll herstellen
+}
+
+hamburger.addEventListener('click', openMenu);
+closeMenu.addEventListener('click', closeMenuFunc);
+
+// Sluit menu bij klikken op een link
+navLinks.forEach(link => {
+  link.addEventListener('click', closeMenuFunc);
+});
+
+
+</script>
+
+</html>

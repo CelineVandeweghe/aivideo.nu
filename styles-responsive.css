@@ -1,0 +1,975 @@
+body {
+    Font-family: 'Antonio', sans-serif;
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+    margin: 0 !important;
+    line-height: 1.5rem;
+}
+
+.watermark-container {
+  position: relative;
+}
+
+.watermark {
+  position: absolute;
+  top: 0;
+  opacity: 0.2; /* Subtiel watermerkeffect */
+}
+
+.kostprijs {
+  border-radius: 20px;
+  width: 60%;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* optioneel, als je ook de inhoud wilt centreren */
+}
+
+
+.watermark.left {
+  left: 50px;
+}
+
+.watermark.right {
+  right: 50px;
+}
+
+.watermark-container .watermark:nth-child(n) {
+  top: calc((1800px * (n - 1)));
+}
+
+.watermark img {
+  width: 30vw; /* 10% van de breedte van het scherm */
+  height: auto;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  font-family: 'Antonio', sans-serif;
+}
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-content form input,
+.popup-content form select,
+.popup-content form textarea,
+.popup-content form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.popup-content form button {
+  background-color: #D4AF37;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-content form button:hover {
+  filter: brightness(90%);
+}
+
+select.dropdown {
+  width: 400px;
+}
+
+input,
+textarea {
+  width: 400px;
+  box-sizing: border-box;
+}
+
+
+.tomorrow-thin {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.tomorrow-extralight {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.tomorrow-light {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.tomorrow-regular {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tomorrow-medium {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.tomorrow-semibold {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.tomorrow-bold {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tomorrow-extrabold {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.tomorrow-black {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.tomorrow-thin-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.tomorrow-extralight-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.tomorrow-light-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.tomorrow-regular-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.tomorrow-medium-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.tomorrow-semibold-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.tomorrow-bold-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.tomorrow-extrabold-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.tomorrow-black-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+.antonio {
+  font-family: "Antonio", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+header {
+    background: linear-gradient(to right, #1A1A1A, #000000);
+    text-align: center;
+}
+
+.top-bar,
+.main-nav {
+    position: absolute; /* Of 'fixed' als je wilt dat ze meescrollen */
+    top: 0;
+    z-index: 10;
+}
+
+.top-bar {
+    background-color: white;
+    display: flex;
+    justify-content: center; /* inhoud centreren */
+    width: 100%;
+    margin-left: 0 !important;
+}
+
+.top-bar p {
+  padding: 0 !important;
+  margin: 10px !important;
+  color: #D4AF37;
+}
+
+.top-bar img {
+  height: 20px;
+  margin: 10px;
+}
+
+.nav-left {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 15%;
+  gap: 50px;
+}
+
+.nav-right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 50px !important;
+  right: 22% !important;
+  gap: 50px;
+}
+
+.logo-wrapper {
+  position: relative;
+  z-index: 5;
+}
+
+.logo-center {
+  display: block;
+  height: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.flags {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  right: 0;
+  margin-right: -17vw;
+}
+
+.flag-icon {
+  width: 30px;
+  height: auto;
+}
+
+.main-nav {
+  margin-top: 55px; /* Pas dit aan op basis van de hoogte van de .top-bar */
+  background-color: rgba(26, 26, 26, 0.9) !important;
+  width: 98vw !important;
+  margin-left: 1vw !important;
+  margin-right: 1vw !important;
+  color: #D4AF37;
+  font-size: 2rem;
+  z-index: 10;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #D4AF37;
+  font-size: 1.5rem;
+}
+
+.hero-header,
+.hero-video {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;  /* 👈 duwt de inhoud naar de onderkant */
+    justify-content: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0 !important;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    z-index: 0;
+    opacity: 0.4;
+    margin: 0 !important;
+}
+
+.bold-p {
+    font-size: 1.2rem !important;
+      font-family: "Tomorrow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding-top: 20px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #FFFFFF !important;
+    padding: 100px 20px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.2em;
+    line-height: 1.5em;
+    font-family: 'Tomorrow', sans-serif;
+    color: #D4AF37;
+}
+
+h3 {
+  font-size: 1em;
+    line-height: 1.5em;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+h4 {
+  font-size: 1em;
+    font-family: 'Antonio', sans-serif;
+    font-weight: bold
+}
+
+header p {
+    Font-family: 'Antonio', sans-serif;
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.cursive {
+    Font-family: 'Antonio', sans-serif;
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 0px !important;
+    margin-bottom: 20px !important;
+}
+
+.cta-buttons a {
+    Font-family: 'Antonio', sans-serif;
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    background-color: #FFFFFF;
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: bold;
+border: 2px solid #D4AF37;
+}
+
+.CTA {
+    Font-family: 'Antonio', sans-serif;
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    background-color: #D4AF37 !important;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+  margin-right: 10vw;
+  margin-left: 10vw;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.features-section {
+  text-align: center;
+  color: black;
+}
+
+h2 {
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #D4AF37;
+  text-align: center;
+}
+
+.features-intro p {
+  font-family: 'Antonio', sans-serif;
+  font-size: 1em;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.features-carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.features-carousel {
+  display: flex;
+  font-family: 'Antonio', sans-serif;
+  transition: transform 0.3s ease-in-out;
+  gap: 20px;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.feature-card {
+  font-family: 'Antonio', sans-serif;
+  flex: 0 0 300px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.feature-card img {
+  max-width: 330px;
+  margin-bottom: 15px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: #D4AF37;
+  font-size: 1.5em;
+  padding: 15px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button.left {
+  left: 0
+}
+
+.carousel-button.right {
+  right: 0;
+}
+
+.videoinsite {
+  border-radius: 20px
+}
+
+.steps-section {
+  text-align: center;
+  color: black;
+  font-family: 'Antonio', sans-serif;
+}
+
+.cap {
+  font-family: 'Antonio', sans-serif;
+  font-size: 0.8rem;
+}
+
+.steps-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.centreren {
+text-align: center
+}
+
+.step-card {
+  flex: 0 0 300px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.step-card img {
+  max-width: 325px;
+  margin-bottom: 15px;
+}
+
+.features ul, .faq ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li, .faq li {
+    margin: 10px 0;
+}
+
+.portfolio-showcase {
+  color: black;
+  text-align: center;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Pas aan voor gewenste ruimte tussen logo's */
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.logo-grid img {
+  max-width: 200px;
+  height: auto;
+}
+
+.testimonials blockquote {
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-left: 5px solid #D4AF37;
+    margin: 20px 0;
+}
+
+.testimonials {
+  margin-top: 40px;
+}
+
+.faq{
+  margin-top: 40px;
+}
+.faq-section {
+  color: black;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  border-left: 5px solid #D4AF37;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: black;
+  font-family: 'Antonio', sans-serif;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 20px;
+}
+
+.faq-question .arrow {
+    transform: rotate(90deg);
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 15px 20px;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(270deg);
+}
+
+.call-to-action {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.call-to-action a {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    background-color: #FFFFFF;
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.CTA2 {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    background-color: #D4AF37 !important;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.site-footer {
+  background-color: #D4AF37; /* Geel */
+  color: #000000;
+  padding: 40px 20px;
+  font-family: 'Antonio', sans-serif;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start; /* 👈 bovenaan uitlijnen */
+  gap: 20px;
+}
+
+.footer-left h3 {
+  color: #000000;
+  margin-bottom: 10px;
+  font-family: 'Tomorrow', sans-serif;
+}
+
+.footer-right a,
+.email-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer-right a:hover,
+.email-link:hover {
+  text-decoration: underline;
+}
+/* Fade-in effect bij scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hovereffecten */
+.cta-buttons a:hover,
+.call-to-action a:hover,
+.CTA:hover,
+.CTA2:hover {
+  filter: brightness(90%);
+  transition: filter 0.3s ease;
+}
+
+.carousel-button:hover {
+  filter: brightness(90%);
+  transition: filter 0.3s ease;
+}
+
+.feature-card,
+.step-card {
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover,
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-thumbnail img {
+  filter: brightness(80%);
+  transition: filter 0.3s ease;
+}
+
+.video-thumbnail:hover img {
+  filter: brightness(100%);
+}
+
+.faq-item {
+  transition: filter 0.3s ease;
+}
+
+.faq-item:hover {
+  filter: brightness(110%);
+}
+
+/* Kleurcorrecties */
+.features-section,
+.steps-section,
+.portfolio-showcase,
+.faq-section {
+  color: black;
+}
+
+.feature-card,
+.step-card,
+.testimonials blockquote,
+.faq-item,
+.video-thumbnails,
+.call-to-action {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.hero-content {
+  color: black;
+}
+
+.testimonials blockquote{
+  padding-bottom: 30px
+}
+
+.faq-question {
+  color: black;
+}
+
+.bloom-logo {
+  max-width: 80px;
+  height: auto;
+  margin-top: 10px;
+  filter: brightness(0) saturate(100%);
+  margin-bottom: 5px;
+}
+
+footer a {
+  color: black
+}
+
+
+.video-fullwidth video {
+  height: auto;
+  object-fit: cover;
+  width: 100%
+}
+
+ol li{
+  text-align: left;
+  margin-left: -20px
+}
+
+.step-card ul li{
+    text-align: left;
+    margin-left: -20px
+}
+
+.gouden-lijn {
+  border: none;
+  height: 5px;
+  width: 400px;
+  background-color: #D4AF37;
+  margin: 20px auto; /* automatische marges centreren het element */
+}
+
+.footer-content.four-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.whatsapp {
+  width:150px;
+  margin-top: 10px;
+}
+
+/* ---------- RESPONSIVE STIJLEN ---------- */
+@media (max-width: 1024px) {
+  .nav-left,
+  .nav-right {
+    gap: 20px;
+    font-size: 1rem;
+  }
+
+  .main-nav {
+    font-size: 1rem;
+    flex-direction: column;
+  }
+
+  .logo-center {
+    height: 50px;
+  }
+
+  .features-carousel {
+    padding: 0 10px;
+  }
+
+  .cta-buttons a, .CTA, .CTA2 {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .top-bar img {
+    height: 15px;
+  }
+
+  .feature-card,
+  .step-card {
+    flex: 0 0 90%;
+  }
+
+  .features-carousel-container .carousel-button {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p,
+  .cursive {
+    font-size: 0.9rem;
+  }
+
+  .top-bar,
+  .main-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-left,
+  .nav-right {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flags {
+    position: static;
+    margin: 10px auto;
+    justify-content: center;
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kostprijs {
+    width: 90%;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100% !important;
+  }
+
+  section {
+    margin: 20px;
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .popup-content {
+    padding: 15px;
+  }
+
+  .footer-column {
+    min-width: 100%;
+  }
+
+  .logo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Aanvullende verbeteringen */
+.nav-left,
+.nav-right {
+  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-nav {
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.hero-video {
+  object-fit: cover;
+}
+
+.watermark img {
+  width: 200px;
+  max-width: 80vw;
+}
+
+.features-carousel {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.features-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.popup-content {
+  max-width: 95vw;
+}
